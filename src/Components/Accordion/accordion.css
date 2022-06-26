@@ -1,0 +1,32 @@
+.accordion-item {
+  border: none !important;
+  border-bottom: 1px solid #ececec !important;
+}
+
+.accordion-body ul li {
+  padding: 10px 0;
+}
+.accordion-body ul li :hover {
+  color: #29a56c;
+}
+.accordion-body ul li a {
+  padding: 0;
+  font-size: 14px !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #29a56c !important;
+  background-color: #fff !important;
+  outline: none !important;
+}
+
+.accordion-button:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+}
+li .accordion-button {
+  padding: 0;
+  font-size: 14px !important;
+}
+li .accordion-item {
+  border-bottom: none !important;
+}

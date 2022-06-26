@@ -3,61 +3,63 @@ import iconHeadPhone from "../../images/icon-headphone.svg";
 import "./navbar.css";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useState } from "react";
+import Text from "./Text";
+import {
+  home,
+  blog,
+  shop,
+  vendors,
+  pages,
+  CATEGORIES1,
+  CATEGORIES2,
+} from "./Constants";
+
 const NavbarMega = () => {
-  const home = [
-    "Home",
-    "Home 1",
-    "Home 2",
-    "Home 3",
-    "Home 4",
-    "Home 5",
-    "Home 6",
-  ];
-  const shop = [
-    "Shop",
-    "Shop 1",
-    "Shop 2",
-    "Shop 3",
-    "Shop 4",
-    "Shop 5",
-    "Shop 6",
-  ];
-  const vendors = [
-    "Vendors",
-    "Vendors 1",
-    "Vendors 2",
-    "Vendors 3",
-    "Vendors 4",
-    "Vendors 5",
-    "Vendors 6",
-  ];
-  const blog = [
-    "Blog",
-    "Blog 1",
-    "Blog 2",
-    "Blog 3",
-    "Blog 4",
-    "Blog 5",
-    "Blog 6",
-  ];
-  const pages = [
-    "Pages",
-    "Pages 1",
-    "Pages 2",
-    "Pages 3",
-    "Pages 4",
-    "Pages 5",
-    "Pages 6",
-  ];
+  const [open, setOpen] = useState(false);
   return (
     <div className="row">
       <div className="col-md-12 d-flex justify-between align-items-center">
         <div className="mega_drop d-none d-lg-block ">
-          <button className="d-flex justify-center align-items-center gap-2">
+          <button
+            className="d-flex justify-center align-items-center gap-2"
+            onClick={() => setOpen(!open)}
+          >
             <AiOutlineAppstore />
             Browse All Categories
             <IoMdArrowDropdown />
           </button>
+
+          {open && (
+            <div className="mega_content">
+              <div className="inner d-flex" style={{ minWidth: "423px" }}>
+                <div>
+                  {CATEGORIES1.map((item, index) => {
+                    return (
+                      <Text
+                        key={index}
+                        icon={item.icon}
+                        text={item.text}
+                        customClasses={"mega_link"}
+                      />
+                    );
+                  })}
+                </div>
+                <div>
+                  {CATEGORIES2.map((item, index) => {
+                    return (
+                      <Text
+                        key={index}
+                        icon={item.icon}
+                        text={item.text}
+                        customClasses={"mega_link"}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div

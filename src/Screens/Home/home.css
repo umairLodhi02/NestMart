@@ -1,0 +1,19 @@
+.nav-tabs {
+  border: 0 !important;
+}
+.nav-tabs.links .nav-link {
+  padding: 0 10px;
+  background: none;
+  font-size: 16px;
+  color: #253d4e !important;
+  border: none !important;
+}
+.nav-tabs.links .nav-link:hover,
+.nav-tabs.links .nav-link.active {
+  color: #3bb77e !important;
+}
+@media screen and (max-width: 500px) {
+  #title {
+    display: block !important;
+  }
+}

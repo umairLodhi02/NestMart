@@ -18,7 +18,7 @@ class NestRoutes extends React.Component {
         return <NotFound />;
       }
     } else {
-      urlArgsBundle.setActivityTag(ACTIVITY_TAG.LOADER);
+      urlArgsBundle.setActivityTag(ACTIVITY_TAG.HOME);
       this.props.history.push(urlArgsBundle.getArgsAsUrlParams());
     }
 
