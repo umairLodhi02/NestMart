@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { SMALL_CARD_DATA } from "../Card/constants";
-import SmallCard from "../Card/SmallCard";
+import SmallCard from "../Card/SmallCard/SmallCard";
 import "./customslider.css";
 import {
   HiOutlineArrowNarrowLeft,
@@ -86,7 +86,7 @@ const CustomSlider = () => {
   };
 
   return (
-    <div>
+    <div className="pb-5">
       <Slider {...settings}>
         {SMALL_CARD_DATA.map((card, index) => {
           return (

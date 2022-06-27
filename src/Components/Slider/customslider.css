@@ -58,6 +58,7 @@
   transition: all 0.2s ease-out;
   text-align: center !important;
   margin-right: 10px;
+  z-index: 100;
 }
 .feature_category .custom_arrow:hover {
   background-color: #3bb77e;
